@@ -1,5 +1,5 @@
 /* Define Global Variables */
-const scrollBtn = document.getElementsByClassName("backToTop")[0];
+const scrollBtn = document.getElementsByClassName("backTop")[0];
 const navBarList = document.getElementById("navbar__list");
 const [...sections] = document.getElementsByTagName("section");
 const	navItems = document.getElementsByClassName("navbar__item");
@@ -7,7 +7,7 @@ const	navItems = document.getElementsByClassName("navbar__item");
 const sectionsIDs = sections.map(sec => sec.id);
 const navItemsData = sections.map(sec => sec.getAttribute("data-nav"));
 
-/* Helper Functions */
+/* Helper Functions Walaa Atef Egypt FWD 2021 */
 const scrollTo = (e) => {
 	e.preventDefault();
 	const target = e.target.getAttribute("data-scroll-to");
@@ -23,11 +23,11 @@ const isInViewport = (elem) => {
   	return bottom >= 0 && top <= winHeight
 };
 
-const showBackToTop = () =>	window.addEventListener("scroll", () => scrollBtn.classList.toggle("backToTop--active", window.scrollY > 500));
+const showbackTop = () =>	window.addEventListener("scroll", () => scrollBtn.classList.toggle("backTop--active", window.scrollY > 500));
 
 const scrollToTop = () => window.scrollTo({ top: 0,	behavior: "smooth" });
 
-/* Begin Main Functions */
+/* Begin Main Functions Walaa Atef Egypt FWD 2021 */
 const buildNav = (nav, items, secIDs) => {
 	const fragment = document.createDocumentFragment();
 
@@ -45,8 +45,7 @@ const buildNav = (nav, items, secIDs) => {
 	nav.appendChild(fragment);
 };
 
-// Add class 'section--active' to section when it's in the viewport
-const activateSec = () => {
+const activateSection = () => {
   sections.map((sec) => {
     window.addEventListener("scroll", (event) => {
       isInViewport(sec)
@@ -57,15 +56,15 @@ const activateSec = () => {
 };
 
 
-/* Call The Functions */
-// Build the nav
+/* Call Functions */
+// Build the nav Walaa Atef Egypt FWD 2021
 buildNav(navBarList, navItemsData, sectionsIDs);
 
-// Active the section in the viewport
-activateSec()
+// Active the section in the viewport Walaa Atef Egypt FWD 2021
+activateSection()
 
-// Show backToTopBtn
-showBackToTop()
+// Show backTopBtn Walaa Atef Egypt FWD 2021
+showbackTop()
 
-// Scroll to top onClick
+// Scroll to top onClick Walaa Atef Egypt FWD 2021
 scrollToTop()

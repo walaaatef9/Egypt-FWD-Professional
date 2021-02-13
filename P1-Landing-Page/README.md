@@ -8,6 +8,7 @@ This project is part of the Egypt-FWD initiative with Udacity Nanodegree in Web 
 In this project, a dynamic navigation bar is required corresponding to sections added to the page 
 and use of basic JavaScript and the DOM.
 
+Al Ahly News in FIFA Club World Cup
 
 ##Architecture
 The project should have a structure like the one shown below. 
@@ -35,8 +36,5 @@ There are at least 4 sections that have been added to the page.
 2. Scroll to any section by clicking on the corresponding element in the Navbar.
 3. By scrolling, the section in the viewport get detected and stylized.
 
-#### Additional Features
-
-- Back to the top button appears when the user scroll > 500px.
 
 
